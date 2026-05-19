@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Minecraft</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="audio-controls">
+        <button id="muteButton" title="Unmute" aria-label="Toggle Mute">
+            <svg id="audioIcon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+        </button>
+    </div>
+    <audio id="musicplayer" preload="auto"></audio>
+    <header>
+        <h1>Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Game History & Updates</h2>
+            <p>From its start as "Cave Game" in 2009 to the massive updates of today, Minecraft has become a cultural phenomenon.</p>
+            <div class="nav-links">
+                <a href="https://www.youtube.com/watch?v=jOg0T9AVH_E" target="_blank">The Full History of Minecraft</a>
+                <a href="https://www.youtube.com/watch?v=cTfJNT0Uo0g" target="_blank">Every Major Update Explained</a>
+            </div>
+        </section>
+        <section>
+            <h2>Amazing Creations</h2>
+            <p>Watch what players can do with millions of blocks and years of dedication.</p>
+            <div class="nav-links">
+                <a href="https://www.youtube.com/watch?v=HJUyzWhmZS8" target="_blank">World's Most Insane Creations</a>
+            </div>
+        </section>
+        <section>
+            <h2>ID Reference Lists</h2>
+            <p>Use these IDs for commands like <code>/give</code>, <code>/setblock</code>, or <code>/summon</code>.</p>
+            <p>For full lists, visit these external databases:</p>
+
+            <div class="nav-links">
+                <a href="https://minecraft-ids.grahamedgecombe.com/" target="_blank">Full Block ID List</a>
+                <a href="https://minecraft-ids.grahamedgecombe.com/entities#google_vignette" target="_blank">Full Entity ID List</a>
+            </div>
+        </section>
+        <section>
+            <h2>My Survival World</h2>
+            <p>Building is my favorite part of the game. Whether it's a massive castle or a redstone farm, there's always something to create.</p>
+        </section>
+    </main>
+    <script src="music.js"></script>
+</body>
+</html>

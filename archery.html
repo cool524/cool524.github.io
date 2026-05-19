@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Archery</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="audio-controls">
+        <button id="muteButton" title="Unmute" aria-label="Toggle Mute">
+            <svg id="audioIcon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+        </button>
+    </div>
+    <audio id="musicplayer" preload="auto"></audio>
+    <header>
+        <h1>Archery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>History of Archery</h2>
+            <p>
+                Archery is one of the oldest human skills, dating back about
+                <strong>70,000 years</strong> to Africa. Before the wheel was
+                even invented, early humans were using bows to hunt and survive.
+            </p>
+            <p>Over time, it changed the world:</p>
+            <ul>
+                <li>
+                    <strong>Ancient Egypt:</strong>
+                    They were the first to use bows in major battles around 3500 BC.
+                </li>
+                <li>
+                    <strong>The Mongols:</strong>
+                    Genghis Khan's army became famous for shooting accurately while
+                    riding horses at full speed.
+                </li>
+                <li>
+                    <strong>The English Longbow:</strong>
+                    In the Middle Ages, these massive bows could hit targets from
+                    over 300 yards away!
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>How to Shoot</h2>
+            <div class="nav-links">
+                <a href="https://www.youtube.com/watch?v=RPBWi_F57C4" target="_blank">
+                    Recurve Bow Tutorial
+                </a>
+                <a href="https://www.youtube.com/watch?v=HbtZMz2opuQ" target="_blank">
+                    Compound Bow Tutorial
+                </a>
+            </div>
+        </section>
+        <section>
+            <h2>Camp Sea Gull</h2>
+            <p>
+                I love practicing at
+                <a href="https://seagull-seafarer.org" target="_blank">Camp Sea Gull</a>.
+                It’s a great place to focus on your form and aim.
+            </p>
+        </section>
+
+        <section>
+            <h2>My Thoughts</h2>
+            <p>
+                Archery is all about focus. It doesn't matter how fast you are;
+                it's about being consistent every single time you pull back the string.
+            </p>
+        </section>
+    </main>
+    <script src="music.js"></script>
+</body>
+</html>

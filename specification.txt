@@ -1,0 +1,394 @@
+========================================================
+                WEBSITE SPECIFICATION
+========================================================
+
+Project Name: My Hub Website
+
+Project Type: Multi-page personal interest website built with HTML, CSS, and JavaScript.
+
+========================================================
+1. OVERVIEW
+========================================================
+
+The website is a personal hub that allows users to explore
+multiple interests through separate themed pages.
+
+The website includes:
+- A homepage hub
+- A Minecraft page
+- An Archery page
+- An Infinite/Math-themed page
+- Background music controls
+- Interactive quiz system
+- Animated visual effects
+- Embedded videos
+- Shared styling across all pages
+
+The design uses a modern gradient-based aesthetic with
+rounded cards, glowing effects, and interactive buttons.
+
+========================================================
+2. FILE STRUCTURE
+========================================================
+
+Required Files:
+
+HTML:
+- index.html
+- minecraft.html
+- archery.html
+- infinite.html
+
+JavaScript:
+- music.js
+- quiz.js
+
+CSS:
+- styles.css
+
+Assets:
+- icon.png
+- dvd.png
+
+Audio Files:
+- adhd.mp3
+- gow-shanty.mp3
+- healthy.mp3
+- holy-mission.mp3
+- minecraft-speedrun.mp3
+- power-hour.mp3
+- seasonal-disappointment.mp3
+- the-bones-of-the-body.mp3
+- we-didn’t-start-the-rl-deck.mp3
+- welcome-to-exam-week.mp3
+
+========================================================
+3. WEBSITE PAGES
+========================================================
+
+--------------------------------------------------------
+3.1 HOMEPAGE (index.html)
+--------------------------------------------------------
+
+Purpose:
+Acts as the central navigation hub.
+
+Features:
+- Main title banner
+- Navigation links to all pages
+- Introductory message
+- Interactive grand quiz
+- Persistent audio controls
+
+Navigation Links:
+- Minecraft
+- Archery
+- Infinite
+
+Quiz Features:
+- Displays questions from all categories
+- Multiple-choice answers
+- Live score tracking
+- Correct/incorrect feedback
+- Final percentage grade
+- Restart functionality
+
+Quiz Categories:
+- Hub & Music Audio Quiz
+- Minecraft Trivia Master
+- Archery History & Target Quiz
+- Infinity & Math Paradox Quiz
+
+--------------------------------------------------------
+3.2 MINECRAFT PAGE (minecraft.html)
+--------------------------------------------------------
+
+Purpose:
+Showcases Minecraft history, updates, and resources.
+
+Features:
+- Minecraft history section
+- External YouTube video links
+- Creation showcase section
+- Minecraft ID database links
+- Personal survival world section
+- Persistent audio controls
+
+External Resources:
+- Minecraft history video
+- Major update video
+- Creations showcase
+- Block ID database
+- Entity ID database
+
+--------------------------------------------------------
+3.3 ARCHERY PAGE (archery.html)
+--------------------------------------------------------
+
+Purpose:
+Explains the history and appeal of archery.
+
+Features:
+- Historical information
+- Ancient civilizations section
+- Longbow facts
+- Tutorial links
+- Camp Sea Gull reference
+- Personal thoughts section
+- Persistent audio controls
+
+Tutorial Types:
+- Recurve Bow Tutorial
+- Compound Bow Tutorial
+
+--------------------------------------------------------
+3.4 INFINITE PAGE (infinite.html)
+--------------------------------------------------------
+
+Purpose:
+Explores infinity-themed concepts and interactive visuals.
+
+Features:
+- Infinite loop counter
+- Animated bouncing DVD image
+- Embedded YouTube video
+- Mathematical theme
+- Persistent audio controls
+
+Interactive Systems:
+1. Increment Counter
+   - Increases displayed number each click
+
+2. Bouncing DVD Animation
+   - Summons moving DVD image
+   - Uses requestAnimationFrame()
+   - Bounces off screen edges
+
+3. Embedded Infinity Video
+   - Responsive iframe display
+   - Glowing animated border effect
+
+========================================================
+4. AUDIO SYSTEM
+========================================================
+
+File:
+music.js
+
+Purpose:
+Provides shared background music functionality across
+all pages.
+
+Features:
+- Playlist system
+- Persistent playback state
+- Persistent mute state
+- Shared synchronization between tabs
+- Autoplay handling
+- Dynamic mute/unmute SVG icons
+
+Storage System:
+Uses localStorage for:
+- Current track index
+- Playback time
+- Mute state
+
+Audio Controls:
+- Floating mute button
+- Bottom-left fixed position
+- SVG icon updates dynamically
+
+Playlist Behavior:
+- Automatically advances tracks
+- Loops playlist continuously
+
+========================================================
+5. QUIZ SYSTEM
+========================================================
+
+File:
+quiz.js
+
+Purpose:
+Provides an interactive trivia experience.
+
+Features:
+- Question database
+- Multiple categories
+- Live score system
+- Correct/incorrect styling
+- End summary screen
+- Restart support
+
+Core Functions:
+- buildFlatBank()
+- updateHeaderTitle()
+- loadQuizQuestion()
+- handleAnswerSelection()
+- showEndScreen()
+- resetQuiz()
+
+Question Flow:
+1. Load question
+2. User selects answer
+3. Show feedback
+4. Update score
+5. Continue to next question
+6. Show final summary
+
+========================================================
+6. DESIGN SPECIFICATIONS
+========================================================
+
+File:
+styles.css
+
+Design Style:
+Modern glassmorphism-inspired UI with gradients and
+rounded components.
+
+Color Palette:
+Primary Blue:
+- #2563eb
+
+Purple Accent:
+- #7c3aed
+
+Background:
+- Soft blue/white gradients
+
+Typography:
+Primary Font:
+- "Segoe UI", Arial, sans-serif
+
+Visual Features:
+- Rounded cards
+- Drop shadows
+- Hover animations
+- Gradient headers
+- Animated buttons
+- Glowing video frame
+
+Layout Characteristics:
+- Centered content
+- Responsive widths
+- Card-based sections
+- Consistent spacing
+
+========================================================
+7. RESPONSIVE BEHAVIOR
+========================================================
+
+The website uses:
+- Flexible layouts
+- Percentage widths
+- Max-width containers
+- Responsive iframe sizing
+- Adaptive spacing
+
+========================================================
+8. ACCESSIBILITY FEATURES
+========================================================
+
+Included Accessibility Features:
+- aria-label for mute button
+- Semantic HTML structure
+- Readable font sizing
+- Strong color contrast
+- Button hover feedback
+
+========================================================
+9. JAVASCRIPT INTERACTIVITY
+========================================================
+
+Interactive Elements:
+- Audio controls
+- Quiz system
+- Animated DVD object
+- Counter increment button
+- Dynamic feedback messages
+
+Animation Methods:
+- CSS transitions
+- requestAnimationFrame()
+- Hover transforms
+- Glow effects
+
+========================================================
+10. EXTERNAL CONTENT
+========================================================
+
+Embedded/Linked Content:
+- YouTube tutorial videos
+- Minecraft databases
+- Camp Sea Gull website
+
+Security Feature:
+- strict-origin-when-cross-origin referrer policy
+  used on embedded iframe
+
+========================================================
+11. USER EXPERIENCE GOALS
+========================================================
+
+The website is designed to:
+- Be visually engaging
+- Encourage exploration
+- Provide entertainment
+- Combine education with interaction
+- Maintain a unified design language
+- Create smooth navigation between pages
+
+========================================================
+12. FUTURE IMPROVEMENT IDEAS
+========================================================
+
+Possible Future Features:
+- Mobile responsive navigation menu
+- Dark mode toggle
+- Animated page transitions
+- More quiz categories
+- User score saving
+- Achievement badges
+- Search functionality
+- Music track display
+- Additional animations
+- Image galleries
+- Custom cursor effects
+
+========================================================
+13. TAGS
+========================================================
+
+<!DOCTYPE html> - HTML5 document
+<html> - Main webpage container
+<head> - Page information
+<title> - Browser tab title
+<link> - Connects CSS/icons
+<body> - Visible content
+<div> - Layout container
+<button> - Clickable button
+<svg> - Vector graphic
+<path> - SVG shape
+<line> - SVG line
+<audio> - Audio player
+<header> - Top page section
+<h1> - Main heading
+<nav> - Navigation area
+<ul> - Unordered list
+<li> - List item
+<a> - Hyperlink
+<main> - Main content
+<section> - Content group
+<h2> - Secondary heading
+<h3> - Third heading
+<p> - Paragraph
+<strong> - Bold text
+<iframe> - Embedded video/page
+<img> - Image
+<code> - Code formatting
+<script> - JavaScript
+
+========================================================
+END OF SPECIFICATION
+========================================================

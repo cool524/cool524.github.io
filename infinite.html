@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Infinite</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="infinite-bg">
+    <div class="audio-controls">
+        <button id="muteButton" title="Unmute" aria-label="Toggle Mute">
+            <svg id="audioIcon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+        </button>
+    </div>
+    <audio id="musicplayer" preload="auto"></audio>
+    <header>
+        <h1>Infinite</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">← Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>The Infinite Space</h2>
+            <p>Exploring the concepts of endless loops and mathematical beauty.</p>
+        </section>
+
+        <section>
+            <h2 id="count">0</h2>
+            <p>Total Iterations</p>
+            <button onclick="addCount()">Increment Loop</button>
+        </section>
+
+        <section>
+            <h2>Summon the Eternal Wanderer</h2>
+            <p>Click the button to release the bouncing DVD image.</p>
+            <button onclick="spawnBouncer()">Summon Bouncer</button>
+        </section>
+
+        <section class="video-card">
+            <div class="video-header">
+                <h2>Visualizing Infinity</h2>
+            </div>
+            <div class="video-frame">
+                <div class="video-glow"></div>
+                <iframe
+                    src="https://www.youtube.com/embed/OxGsU8oIWjY"
+                    title="Infinity Video"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <div id="bouncer" style="position: fixed; width: 100px; display: none; z-index: 9999;">
+        <img src="dvd.png" style="width:100%;" alt="Bouncing DVD">
+    </div>
+    <script>
+        let posX = 100;
+        let posY = 100;
+        let velX = 3;
+        let velY = 2;
+        let started = false;
+
+        function spawnBouncer() {
+            const bouncer = document.getElementById("bouncer");
+            bouncer.style.display = "block";
+            if (!started) {
+                started = true;
+                requestAnimationFrame(moveBouncer);
+            }
+        }
+
+        function moveBouncer() {
+            const bouncer = document.getElementById("bouncer");
+            posX += velX;
+            posY += velY;
+
+            if (posX <= 0 || posX + bouncer.offsetWidth >= window.innerWidth) {
+                velX *= -1;
+            }
+            if (posY <= 0 || posY + bouncer.offsetHeight >= window.innerHeight) {
+                velY *= -1;
+            }
+
+            bouncer.style.left = posX + "px";
+            bouncer.style.top = posY + "px";
+            requestAnimationFrame(moveBouncer);
+        }
+
+        let clicks = 0;
+        function addCount() {
+            clicks++;
+            document.getElementById("count").innerText = clicks.toLocaleString();
+        }
+    </script>
+    <script src="music.js"></script>
+</body>
+</html>
