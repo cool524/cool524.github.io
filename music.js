@@ -9,6 +9,7 @@ const playlist = [
     { src: "the-bones-of-the-body.mp3" },
     { src: "we-didn’t-start-the-rl-deck.mp3" },
     { src: "welcome-to-exam-week.mp3" },
+    { src: "the-roots-song.mp3" },
 ];
 
 let player, muteBtn, audioIcon;
